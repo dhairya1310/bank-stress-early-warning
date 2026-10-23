@@ -52,6 +52,8 @@ Prioritize review of the two banks that fail the rate shock, then the two large 
 - **First Republic ranked only #110.** Its risk was concentrated in uninsured deposits and a large low-rate mortgage book. An equal-weight average dilutes a bank that is extreme on one or two metrics.
 - **Duration assumptions.** Mortgage bond durations are assumed, and the model ignores convexity beyond a simple down-shock adjustment.
 - **Bank level only.** Call Reports cover the bank, not the holding company.
+- **Liquidity metric is narrow.** It counts only cash and unpledged securities, and ignores FHLB and Fed borrowing capacity.
+- **Data check.** Pipeline figures for SVB, Signature and First Republic at 2022 Q4 match the public record (SVB: $209.0B assets, $151.6B uninsured deposits, $15.2B HTM unrealized loss). See `06_sanity_check.py`.
 - **Methodology change.** After the first run, the capital metric was switched from a risk-weighted basis to a leverage basis, because smaller banks on the community bank leverage ratio do not report risk-weighted assets. The change fixed a data gap in the watchlist; it was not tuned to the backtest. Results before the change were similar: Signature #4, SVB #39, First Republic #129, Republic First #1.
 
 ## Repo structure
@@ -64,6 +66,7 @@ config.py              field codes, thresholds and assumptions
 03_backtest.py         backtest against failures since 2023
 04_rate_shock.py       rate shock model and the Excel scenario workbook
 05_dashboard_data.py   prepares CSVs for Tableau
+06_sanity_check.py     checks pipeline figures against the public record
 MEMO.md                one-page risk committee memo
 ```
 

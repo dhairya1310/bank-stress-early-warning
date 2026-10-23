@@ -19,7 +19,7 @@ The other eight top 10 banks stay above 6% even at +200bp.
 
 **2. Thin liquidity against uninsured deposits.** This is the pattern that sank SVB and Signature.
 - North American Banking Company (#4, $1.5B): 81% of deposits are uninsured.
-- Reading Co-operative Bank (#5, $1.2B): cash plus unpledged securities cover only 4% of uninsured deposits.
+- Reading Co-operative Bank (#5, $1.2B): cash plus unpledged securities cover only 4% of uninsured deposits. Almost all of its $134M securities book is pledged, leaving $2M free.
 - First Hawaiian Bank (#8, $23.6B): liquid assets cover only 20% of uninsured deposits, with 48% of deposits uninsured.
 
 **3. Commercial real estate concentration.** Four of the top 10 hold CRE above the 300%-of-capital supervisory threshold: Simmons Bank (345%), Union Bank (335%), Inwood National Bank (325%) and Texas Regional Bank (312%).
@@ -43,4 +43,4 @@ The other eight top 10 banks stay above 6% even at +200bp.
 
 ## Limitations
 
-The backtest rests on only four failures, so treat it as a sanity check, not proof. Mortgage bond durations are assumptions. The data is at the bank level, not the holding company level. Reading Co-operative's 4% liquidity figure is unusually low and should be checked against the original filing before any action.
+The backtest rests on only four failures, so treat it as a sanity check, not proof. Mortgage bond durations are assumptions. The data is at the bank level, not the holding company level. The liquidity metric counts only cash and unpledged securities. It ignores borrowing capacity at the FHLB and the Fed discount window, so it overstates the risk for banks with strong borrowing lines. The underlying figures were checked against the public record for SVB, Signature and First Republic and matched.
