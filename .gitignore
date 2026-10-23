@@ -1,0 +1,11 @@
+data/
+output/*.csv
+__pycache__/
+.env
+
+.DS_Store
+~$*
+.~*
+*.twbr
+final_docs*
+RESULTS_LOG.md

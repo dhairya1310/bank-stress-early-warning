@@ -1,0 +1,18 @@
+BACKTEST as of 2022-12-31 (907 banks over $1B scored)
+Failures since 2023 that were over $1B: 4
+
+                            bank_name closing_date pit_quarter  pit_score  pit_rank  pit_n  pit_percentile  score_2022q4  rank_2022q4
+                  Silicon Valley Bank   2023-03-10  2022-12-31       73.6        37    907            96.0          73.6           37
+                       Signature Bank   2023-03-12  2022-12-31       83.2         5    907            99.6          83.2            5
+                  First Republic Bank   2023-05-01  2022-12-31       66.9       110    907            88.0          66.9          110
+Republic First Bank dba Republic Bank   2024-04-26  2023-12-31       91.3         1    932           100.0          92.5            1
+
+Top-N capture (fixed snapshot):
+  Top  10: 2 of 4 failures caught | precision 20.0% vs 0.4% random | false positives 8
+  Top  25: 2 of 4 failures caught | precision 8.0% vs 0.4% random | false positives 23
+  Top  50: 3 of 4 failures caught | precision 6.0% vs 0.4% random | false positives 47
+  Top 100: 3 of 4 failures caught | precision 3.0% vs 0.4% random | false positives 97
+
+Top 25 banks that did NOT fail: 23. Check which were acquired, raised capital, or cut dividends in 2023. Those are 'near misses', not pure noise.
+
+Caveat: very few failures over $1B. Treat this as a sanity check, not proof.
